@@ -1,0 +1,41 @@
+﻿<Page x:Class="WpfApp13.View.ViborMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp13.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViborMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="509*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Name="_1" Command="{Binding Selected}" CommandParameter="Otlicno" IsChecked="{Binding CheckOtlicno, Mode=TwoWay}" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <CheckBox Name="_2" Command="{Binding Selected}" CommandParameter="Horoch" IsChecked="{Binding CheckHoroch, Mode=TwoWay}" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <CheckBox Name="_3" Command="{Binding Selected}" CommandParameter="Tak"  IsChecked="{Binding CheckTak, Mode=TwoWay}" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <CheckBox Name="_4" Command="{Binding Selected}" CommandParameter="Ploho"  IsChecked="{Binding CheckPloho, Mode=TwoWay}" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <CheckBox Name="_5" Command="{Binding Selected}" CommandParameter="Yjacno" IsChecked="{Binding CheckYjacno, Mode=TwoWay}" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="2" FontSize="25px" Margin="10,0,0,0"  HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Otlicnotxt, Mode=TwoWay}" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="2" Grid.Row="1" FontSize="25px" HorizontalAlignment="Left"  TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Horochtxt, Mode=TwoWay}" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="2" Grid.Row="2" FontSize="25px" HorizontalAlignment="Left"  TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Taktxt, Mode=TwoWay}" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="2" Grid.Row="3" FontSize="25px" HorizontalAlignment="Left"  TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Plohotxt, Mode=TwoWay}" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="2" Grid.Row="4" FontSize="25px" HorizontalAlignment="Left"  TextWrapping="Wrap" Margin="10,0,0,0" Text="{Binding Yjacnotxt, Mode=TwoWay}" VerticalAlignment="Center" />
+        <Image Margin="5,0,0,5" Grid.Row="0" HorizontalAlignment="Left" Grid.Column="1" Source="{Binding PathKartinkiOtlicno, Mode=TwoWay}"/>
+        <Image Margin ="5,0,0,5"  Grid.Row="1" HorizontalAlignment="Left" Grid.Column="1"  Source="{Binding PathKartinkiHoroch, Mode=TwoWay}"/>
+        <Image Margin ="5,0,0,5" Grid.Row="2" HorizontalAlignment="Left" Grid.Column="1" Source="{Binding PathKartinkiTak, Mode=TwoWay}" />
+        <Image Margin ="5,0,0,5" Grid.Row="3" HorizontalAlignment="Left"  Grid.Column="1" Source="{Binding PathKartinkiPloho, Mode=TwoWay}"/>
+        <Image Margin ="5,0,0,5" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Source="{Binding PathKartinkiYjacno, Mode=TwoWay}" />
+        <Button x:Name="Save" Grid.Row="5" Content="Сохранить" Command="{Binding Save}" Click="Save_Click"/>
+    </Grid>
+</Page>
